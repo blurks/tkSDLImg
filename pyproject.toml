@@ -51,8 +51,8 @@ test = [
   "pytest",
 ]
 
-# [project.urls]
-# "Source" = ""
+[project.urls]
+"Source" = "https://github.com/blurks/tkSDLImg"
 
 [tool.setuptools]
 package-data = {}
