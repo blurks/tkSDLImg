@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tkSDLImg"
+version = "0.0.1"
+description = "Tk widget for showing an image using SDL."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "Tarik Havighorst", email = "code@blurks.de" }
+]
+
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+  "opencv-python",
+  "numpy",
+  "pysdl2",
+  "pysdl2-dll",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "pycodestyle",
+  "pydocstyle",
+  "pyflakes",
+  "mypy",
+]
+
+pylsp = [
+  "python-lsp-server",
+  "yapf",
+  "rope",
+]
+
+test = [
+  "pytest",
+]
+
+# [project.urls]
+# "Source" = ""
+
+[tool.setuptools]
+package-data = {}
+
+[tool.mypy]
+mypy_path = "src"
+modules = ["tkSDLImg"]
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+testpaths = ["tests"]
