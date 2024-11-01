@@ -50,14 +50,10 @@ def fit_dimensions(
         width = dst_size[0]
         factor = dst_size[0] / src_size[0]
         height = int(np.ceil(src_size[1] * factor))
-        if height == 0:
-            height = 1
     else:
         height = dst_size[1]
         factor = dst_size[1] / src_size[1]
         width = int(np.ceil(src_size[0] * factor))
-        if width == 0:
-            width = 1
 
     return (width, height)
 
