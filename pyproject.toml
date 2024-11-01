@@ -58,8 +58,7 @@ test = [
 package-data = {}
 
 [tool.mypy]
-mypy_path = "src"
-modules = ["tkSDLImg"]
+files = ["tests/*.py", "src/*.py"]
 disallow_untyped_defs = true
 warn_return_any = true
 warn_unreachable = true
