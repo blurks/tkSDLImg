@@ -61,7 +61,7 @@ where = ["src"]
 "tkSDLImg" = ["py.typed"]
 
 [tool.mypy]
-files = ["tests/*.py", "src/*.py"]
+files = ["tests/*.py", "src/tkSDLImg/*.py"]
 disallow_untyped_defs = true
 warn_return_any = true
 warn_unreachable = true
